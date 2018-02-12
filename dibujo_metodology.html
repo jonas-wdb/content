@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html><html><head><title></title><link type="text/css" rel="stylesheet" href="./markdown.css"></head><body><hr>
+<p>[3:1:3-4 Metodología]</p>
+<h1>¿Cómo llegar a crear una solución?</h1>
+<p><em><strong>&quot;Encontrar una solución consiste en construir un curso de acciones que transformen su situación actual en una donde su objetivo se ha logrado.&quot;</strong></em></p>
+<hr>
+<h1>¿Cómo lo hacemos?</h1>
+<ul>
+<li>Descomponer o desconstrucción de la solución en &quot;partes&quot; de su funcionalidad.</li>
+<li>Investigar posibilidades para cada pieza</li>
+<li>Hacer pruebas/prototipos, encontrar ejemplos, código, librerías etc.</li>
+<li>Por cada parte proponer como, con que tecnología y funcionalidad se puede implementarlo</li>
+<li>Diseñar como estructurar la solución y el código</li>
+<li>Implementar y Verificar</li>
+<li>Optimizar</li>
+<li>Entregar o poner en producción</li>
+</ul>
+<hr>
+<h1>Dibujo proyecto</h1>
+<p><em><strong>Descomponer la solución en &quot;partes&quot; de funcionalidad</strong></em></p>
+<h2>¿Qué sabemos que vamos necesitar?</h2>
+<img src="./DibujoFrame.jpg" width="600">
+<hr>
+<p><video src="./Dibujomp4.mp4" width="90%" controls></video></p>
+<hr>
+<h1>Análisis y desconstrucción</h1>
+<h2>¿Qué debería hacer?</h2>
+<ul>
+<li>Pintar algo en la consola</li>
+<li>Cambiar color de texto y fondo</li>
+<li>Animar lo que pintamos =&gt; Animación</li>
+<li>Alguna partes se mueven, otras no</li>
+</ul>
+<h2>Animación - ejemplo</h2>
+<hr>
+<p><img src="./Hombresito1.jpg"></img></p>
+<hr>
+<p><img src="./Hombresito2.jpg"></img></p>
+<hr>
+<p><img src="./Hombresito3.jpg"></img></p>
+<ul>
+<li>Pintar algo en diferentes posiciones en la consola</li>
+</ul>
+<hr>
+<h2>Primer paso, lo básico</h2>
+<p>Empezamos pensar como vamos a ...</p>
+<h2><em><strong>Conseguir una pantalla estática, sin animación</strong></em></h2>
+<p>Así, como pintar algo en la consola!</p>
+<p>Eso <strong>sabemos!</strong> con...</p>
+<pre><code>    console.log(...);
+</code></pre>
+<p>y con un <code>string</code> así
+<code></p>
+<pre>"
+
+     Width: 80 Height: 26••••••••••
+     •        •          •        •
+     •        •          •        •
+     •        •          •  ••••• •
+     •        •          •  •   • •
+     •    ••••••••••     •  •   • •
+     •    •   •    •     •  •   • •
+     •    •   •    •     •  •   • •
+     •    •   •    •     •  ••••• •
+     •    •   •    •     •        •
+     ••••••••••    •     ••••••••••
+          •        •
+          •        •
+          •        •
+          •        •
+          ••••••••••
+"
+</pre>
+</code>
+<h2>¿Qué queremos saber, o qué preguntas falta...?</h2>
+<h2>¿Qué cosas hay?</h2>
+<h2>¿Qué características tienen?</h2>
+<h2>¿Qué tenemos que hacer con esto?</h2>
+<hr>
+<h2>Nuestra pantalla es una consola</h2>
+<p>¿Qué es una consola, qué es lo que tiene, qué comportamientos exhibe una consola?</p>
+<h2>Una consola - cuadraditos en posiciones</h2>
+<img src="./boxes.png" width="80%" style="min-width:1000px;">
+<p>Cada letra o carácter ordenados en filas y columnas</p>
+<p>Podemos nombrar o referir a cada posición con sus coordenadas <strong>X</strong> y <strong>Y</strong></p>
+<img src="./coordinates.png" >
+<p>Cada posición entonces tiene:</p>
+<ul>
+<li>
+<p><strong>Colores</strong></p>
+<ul>
+<li><strong>De Texto</strong></li>
+<li><strong>De Fondo</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Posicionamiento</strong></p>
+<ul>
+<li><strong>X-axis</strong></li>
+<li><strong>Y-axis</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>¿Qué pintar y dónde</strong>
+<ul>
+<li>Carácter o símbolo</li>
+<li>Su color, primer plano y fondo</li>
+<li>En que lugar, <strong>coordinadas X, Y</strong></li>
+</ul>
+</li>
+</ul>
+<h2>¿Qué sabemos, y que NO sabemos?</h2>
+<h3>Sabemos como pintar texto en la consola</h3>
+<h3>No sabemos como cambiar el color del texto y fondo</h3>
+<h1>A buscar!</h1>
+<p>&quot;<strong><em>how to change the colors in windows console from javascript</em></strong>&quot;</p>
+<img src="./SearchConsoleColor.png" width="80%">
+<p>https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color</p>
+<hr>
+<h2>Sabemos como pintar texto en la consola, pero...</h2>
+<h2>¿Cómo vamos pintar figuras, como rectángulos?</h2>
+<p><img src="./RectanglesAndCoordinates.png" style="width:40%;"></img></p>
+<h3><strong>Rect1 : X = 3, Y = 2, Width = 15, Height =  11</strong></h3>
+<h3><strong>Rect2 : X = 12, Y = 4, Width = 19, Height =  17</strong></h3>
+<h3>Rectángulos</h3>
+<ul>
+<li>Altura, anchura, y posición <strong>X</strong> y <strong>Y</strong></li>
+<li>Son hecho de líneas
+<ul>
+<li>Líneas verticales</li>
+<li>Líneas  horizontales</li>
+</ul>
+</li>
+</ul>
+<p><em><strong>Así primero necesitamos saber como pintar líneas horizontales, y verticales.</strong></em></p>
+<h2><strong>Rect1</strong>:</h2>
+<ul>
+<li>Línea horizontal <strong>top: X=3, Y=2, Length=15</strong></li>
+<li>Línea horizontal <strong>bottom: X=3, Y=13, Length=15</strong></li>
+<li>Línea vertical <strong>left: X=3, Y=2, Length=11</strong></li>
+<li>Línea vertical <strong>right: X=18, Y=2, Length=11</strong></li>
+</ul>
+<h2><strong>Rect2</strong>:</h2>
+<ul>
+<li>Línea horizontal <strong>top: X=12, Y=4, Length=10</strong></li>
+<li>Línea horizontal <strong>bottom: X=12, Y=21, Length=10</strong></li>
+<li>Línea vertical <strong>left: X=12, Y=4, Length=17</strong></li>
+<li>Línea vertical <strong>right: X=22, Y=4, Length=17</strong></li>
+</ul>
+<hr>
+</body></html>
